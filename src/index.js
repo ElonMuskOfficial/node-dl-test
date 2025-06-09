@@ -4,15 +4,17 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const UserAgent = require('user-agents');
 
-// Configure stealth plugin with additional settings
-puppeteer.use(StealthPlugin({
-  // These options make the stealth plugin more aggressive
-  enableOnHeadless: true,
-  hideWebDriver: true,
-  mockChrome: true,
-  mockDeviceMemory: 8,
-  mockDeviceScaleFactor: 2
-}));
+// Configure stealth plugin
+puppeteer.use(StealthPlugin());
+
+// Remove the advanced options which might be causing issues
+// puppeteer.use(StealthPlugin({
+//   enableOnHeadless: true,
+//   hideWebDriver: true,
+//   mockChrome: true,
+//   mockDeviceMemory: 8,
+//   mockDeviceScaleFactor: 2
+// }));
 
 const app = express();
 const port = process.env.PORT || 5000;
