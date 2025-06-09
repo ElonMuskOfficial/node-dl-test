@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const UserAgent = require('user-agents');
 
-// Configure stealth plugin with additional settings
+// Configure stealth plugin with additional settings chek 1
 puppeteer.use(StealthPlugin({
   // These options make the stealth plugin more aggressive
   enableOnHeadless: true,
