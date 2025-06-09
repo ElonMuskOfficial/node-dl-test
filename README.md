@@ -1,1 +1,1 @@
-Chek
+Chek.
